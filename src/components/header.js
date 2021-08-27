@@ -2,12 +2,23 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { FaBars } from 'react-icons/fa'
+import { menuItems } from './MenuItems/MenuItems'
 
 const Header = () => {
  return (
    <Nav>
      <NavLink to="/">Simba-USA</NavLink>
      <Bars />
+     <NavTest>
+       {menuItems.map((props, index) => {
+          return (
+          <NavLink to={props.Link} key={index}>
+            {props.title}
+          </NavLink>
+          )
+        }
+      )}
+     </NavTest>
    </Nav>
    )
 }
@@ -47,5 +58,18 @@ const Bars = styled(FaBars)`
     cursor: pointer;
 
   }
+
+`
+
+const NavTest = styled.div`
+
+  display: flex;
+  align-items: center;
+  margin-right: -48px;
+
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+
 
 `
