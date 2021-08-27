@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { FaBars } from 'react-icons/fa'
 import { menuItems } from './MenuItems/MenuItems'
+import Img from "gatsby-plugin-image"
 
 const Header = () => {
  return (
@@ -35,6 +36,7 @@ const Nav = styled.nav`
 `
 
 const NavLink = styled(Link)`
+  background-image: url('../images/SIMBA_LOGO_LONG_WHITE.png');
   color: #fff;
   display: flex;
   align-items: center;
