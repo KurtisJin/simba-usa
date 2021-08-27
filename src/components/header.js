@@ -3,14 +3,15 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { FaBars } from 'react-icons/fa'
 import { menuItems } from './MenuItems/MenuItems'
-import Img from "gatsby-plugin-image"
+// import Img from "gatsby-plugin-image"
+// import Logo from '../images/SIMBA_LOGO_LONG_WHITE.png'
 
 const Header = () => {
  return (
    <Nav>
      <NavLink to="/">Simba-USA</NavLink>
      <Bars />
-     <NavTest>
+     <NavBar>
        {menuItems.map((props, index) => {
           return (
           <NavLink to={props.Link} key={index}>
@@ -19,7 +20,9 @@ const Header = () => {
           )
         }
       )}
-     </NavTest>
+      {/* <Img alt="Avatar" heigth="30" width="30" src={Logo} className="align-top d-inline-block rounded-circle mr-2"/> */}
+
+     </NavBar>
    </Nav>
    )
 }
@@ -63,7 +66,7 @@ const Bars = styled(FaBars)`
 
 `
 
-const NavTest = styled.div`
+const NavBar = styled.div`
 
   display: flex;
   align-items: center;
