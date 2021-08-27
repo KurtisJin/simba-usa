@@ -1,11 +1,11 @@
-import { StyledProps } from "styled-components";
+// import { StyledProps } from "styled-components";
 
-export const style = StyledProps`
+// export const style = StyledProps`
 
-    * {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-`
+//     * {
+//         font-family: 'Roboto', sans-serif;
+//         margin: 0;
+//         padding: 0;
+//         box-sizing: border-box;
+//     }
+// `

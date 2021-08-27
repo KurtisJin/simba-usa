@@ -4,12 +4,23 @@ import styled from "styled-components"
 import { FaBars } from 'react-icons/fa'
 import { menuItems } from './MenuItems/MenuItems'
 import { StaticImage } from "gatsby-plugin-image"
-import "./Styles/"
+import { Button } from "./Button"
+// import "./Styles/"
 
 const Header = () => {
  return (
    <Nav>
-     <NavLink to="/">Simba-USA</NavLink>
+     {/* <NavLink to="/">Simba-USA</NavLink> */}
+     <div className="logo">
+        <StaticImage 
+          src='../images/SIMBA_LOGO_LONG_BLAACK.png'
+          alt="picture of a lion. A logo. Simba"
+          placeholder="blurred"
+          layout="fixed"
+          width={500}
+          height={70}
+        />
+        </div>
      <Bars />
      <NavBar>
        {menuItems.map((props, index) => {
@@ -21,18 +32,13 @@ const Header = () => {
           )
         }
       )}
-      <div className="logo">
-        <StaticImage 
-          src='../images/SIMBA_LOGO_LONG_WHITE.png'
-          alt="picture of a lion. A logo. Simba"
       
-          placeholder="blurred"
-          layout="fixed"
-          width={70}
-          height={70}
-        />
-        </div>
      </NavBar>
+     <NavBtn>
+        <Button primary="true" round="true" to="/contact">
+          Contact Us Now!
+          </Button>
+     </NavBtn>
    </Nav>
    )
 }
@@ -73,6 +79,11 @@ const Bars = styled(FaBars)`
 
   }
 
+  &:hover {
+    background: ${({primary}) => (primary ? '#fff' : '#F26A2E')};
+
+  }
+
 `
 
 const NavBar = styled.div`
@@ -85,10 +96,16 @@ const NavBar = styled.div`
     display: none;
   }
 
+ 
 `
 
-// const Image = styled.image`
-//   background: red;
-//   margin-right: 100px;
-
-// `
+const NavBtn = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  
+`

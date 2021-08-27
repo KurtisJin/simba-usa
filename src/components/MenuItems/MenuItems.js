@@ -3,6 +3,5 @@ export const menuItems = [
     {title: "Projects", Link: "/projects"},
     {title: "Our Partners", Link: "/partner"},
     {title: "Careers", Link: "/careers"},
-    {title: "Contact Us", Link: "/contact"},
 
 ]
