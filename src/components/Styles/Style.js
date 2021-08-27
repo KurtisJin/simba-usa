@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import { StyledProps } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
+export const style = StyledProps`
 
     * {
         font-family: 'Roboto', sans-serif;
@@ -9,4 +9,3 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 `
-

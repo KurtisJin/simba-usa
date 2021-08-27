@@ -3,17 +3,15 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { FaBars } from 'react-icons/fa'
 import { menuItems } from './MenuItems/MenuItems'
-import Img from "gatsby-plugin-image"
-// import Logo from './Images/'
-
-// console.log(logo);
+import { StaticImage } from "gatsby-plugin-image"
+import "./Styles/"
 
 const Header = () => {
  return (
    <Nav>
      <NavLink to="/">Simba-USA</NavLink>
      <Bars />
-     <NavTest>
+     <NavBar>
        {menuItems.map((props, index) => {
           return (
           <NavLink to={props.Link} key={index}>
@@ -23,8 +21,18 @@ const Header = () => {
           )
         }
       )}
-     </NavTest>
-     <Img src="./Images/SIMBA_LOGO_LONG_WHIITE.png" alt="logo of a lion" />
+      <div className="logo">
+        <StaticImage 
+          src='../images/SIMBA_LOGO_LONG_WHITE.png'
+          alt="picture of a lion. A logo. Simba"
+      
+          placeholder="blurred"
+          layout="fixed"
+          width={70}
+          height={70}
+        />
+        </div>
+     </NavBar>
    </Nav>
    )
 }
@@ -67,7 +75,7 @@ const Bars = styled(FaBars)`
 
 `
 
-const NavTest = styled.div`
+const NavBar = styled.div`
 
   display: flex;
   align-items: center;
@@ -77,5 +85,10 @@ const NavTest = styled.div`
     display: none;
   }
 
-
 `
+
+// const Image = styled.image`
+//   background: red;
+//   margin-right: 100px;
+
+// `
