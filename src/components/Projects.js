@@ -1,8 +1,36 @@
 import React from 'react';
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from "gatsby-plugin-image"
 
 const Projects = () => {
 
+ const data = useStaticQuery(graphql`
+    query ProjectQuery {
+        allProjectsJson {
+        edges {
+            node {
+            alt
+            button
+            name
+            img
+            }
+        }
+        }
+    }
+ `)
+    
+ function getProjects(data) {
+     const ProjectsArray = [];
+     data.allProjectsJson.edges.forEach((item, index) => {
+         ProjectsArray.push(
+             <div ket={index}>
+                 <Img src={item.node.img}/>
+             </div>
+         )
+     })
+     return ProjectsArray
+ }
     return(
 
         <ProjectContainer>

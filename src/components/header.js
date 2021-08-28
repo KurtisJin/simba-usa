@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { FaBars } from 'react-icons/fa'
-import { menuItems } from './MenuItems/MenuItems'
+import { menuItems } from './data/MenuItems'
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "./Button"
 // import "./Styles/"
