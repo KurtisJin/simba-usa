@@ -13,7 +13,7 @@ const Header = () => {
      {/* <NavLink to="/">Simba-USA</NavLink> */}
      <div className="logo">
         <StaticImage 
-          src='../images/SIMBA_LOGO_LONG_BLAACK.png'
+          src='../images/SIMBA_LOGO_LONG_WHITE.png'
           alt="picture of a lion. A logo. Simba"
           placeholder="blurred"
           layout="fixed"
@@ -45,7 +45,7 @@ const Header = () => {
 export default Header
 
 const Nav = styled.nav`
-  background: red;
+  background: transparent;
   height:80px;
   display: flex;
   justify-content:space-between;
