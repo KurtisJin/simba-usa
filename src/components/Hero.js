@@ -42,9 +42,10 @@ color: #ffff;
     right: 0;
     left: 0;
     z-index: 2;
-    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%,),
-    linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
+    background: linear-gradient(380deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.6) 100%,),
+    linear-gradient(380deg, rgba(0,0,0,0.5) 0%, transparent 100%);
 }
+
 
 `
 
@@ -90,22 +91,19 @@ const HeroItems = styled.div`
     line-height: 1.1;
     font-weight: bold;
 
-   
-
 `
 
 const HeroH1 = styled.h1`
- font-size: clamp(1.5rem, 6vw, 4rem);
- margin-bottom: 1.5rem;
- letter-spacing: 3px;
- padding: 0 1rem;
-
+    font-size: clamp(1.5rem, 6vw, 4rem);
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+    padding: 0 1rem;
 
 `
 
 const HeroP = styled.p`
     font-size: clamp( 1rem, 3vw, 3rem);
     margin-bottom: 2rem;
-
+    font-weight: 400;
 
 `
