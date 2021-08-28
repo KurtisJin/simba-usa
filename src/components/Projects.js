@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
+
 
 const Projects = () => {
 
- const data = useStaticQuery(graphql`
+ const queryData = useStaticQuery(graphql`
     query ProjectQuery {
       allProjectsJson {
         edges {
@@ -48,14 +50,13 @@ const Projects = () => {
     
  function getProjects(data) {
      const ProjectsArray = [];
-     data.allProjectsJson.edges.forEach((data, index) => {
+    //  console.log(data);
+     data.allProjectsJson.edges.forEach((item, index) => {
          ProjectsArray.push(
              <div key={index}>
-                 <Img src ={data.node.children.ImageSharp.fluid.src}
-                 fluid={data.node.ImageSharp.fluid}
-                 />
-                 
-                 
+                 <GatsbyImage src={item.node.img}
+                 fluid={item.node.children.fluid}
+                 /> 
              </div>
          )
      })
@@ -65,7 +66,7 @@ const Projects = () => {
 
         <ProjectContainer>
             <ProjectHeading>ProjectHeading</ProjectHeading>
-            <ProjectWrapper>{getProjects(data)}</ProjectWrapper>
+            <ProjectWrapper>{getProjects(queryData)}</ProjectWrapper>
         </ProjectContainer>
 
     )
