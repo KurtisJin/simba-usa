@@ -1,34 +1,34 @@
 [
     {
-        "img": "../images/farmer.jpg",
+        "img01": "../assets/images",
         "alt": "Black hands holding fruit. farmer.",
         "name": "African holding fruit basket",
         "button": "Learn More"
     },
 
     {
-        "img": "../images/farmer.jpg",
+        "img02": "../images/farmer.jpg",
         "alt": "Black hands holding fruit. farmer.",
         "name": "African holding fruit basket",
         "button": "Learn More"
     },
 
     {
-        "img": "../images/lab.jpg",
+        "img03": "../images/lab.jpg",
         "alt": "Black hands holding fruit. farmer.",
         "name": "African holding fruit basket",
         "button": "Learn More"
     },
 
     {
-        "img": "../images/landscape.jpg",
+        "img04": "../images/landscape.jpg",
         "alt": "Black hands holding fruit. farmer.",
         "name": "African holding fruit basket",
         "button": "Learn More"
     },
 
     {
-        "img": "../images/kitchen-sing-QDVEEUT.jpg",
+        "img05": "../images/kitchen-sing-QDVEEUT.jpg",
         "alt": "Water coming out of fosit. Clean water. Black womans arms",
         "name": "Clean water",
         "button": "Learn More"

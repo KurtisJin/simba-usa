@@ -54,7 +54,7 @@ const Projects = () => {
      data.allProjectsJson.edges.forEach((item, index) => {
          ProjectsArray.push(
              <div key={index}>
-                 <GatsbyImage src={item.node.img}
+                 <GatsbyImage src={item.node.img01}
                  fluid={item.node.children.fluid}
                  /> 
              </div>
