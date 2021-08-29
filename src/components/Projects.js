@@ -2,28 +2,17 @@ import React from 'react';
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby';
 // import Img from "gatsby-image"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage , getImage } from "gatsby-plugin-image"
 
 
 const Projects = () => {
-
+  
  const queryData = useStaticQuery(graphql`
     query ProjectQuery {
       allProjectsJson {
         edges {
           node {
-            alt
-            button
-            name
             img
-            children {
-              ... on ImageSharp {
-                id
-                fluid {
-                  src
-                }
-              }
-            }
           }
         }
       }
@@ -47,15 +36,29 @@ const Projects = () => {
 // `
 
 // export default ComponentName
+
+// function BlogPost({ data }) {
+//   const image = getImage(data.blogPost.avatar)
+//   return (
+//     <section>
+//       <h2>{data.blogPost.title}</h2>
+//       <GatsbyImage image={image} alt={data.blogPost.author} />
+//       <p>{data.blogPost.body}</p>
+//     </section>
+//   )
+//  }
     
  function getProjects(data) {
+  
      const ProjectsArray = [];
     //  console.log(data);
-     data.allProjectsJson.edges.forEach((item, index) => {
+          data.allProjectsJson.edges.forEach((item, index) => {
+          // const image = getImage(item.node.img)
          ProjectsArray.push(
              <div key={index}>
-                 <GatsbyImage src={item.node.img01}
-                 fluid={item.node.children.fluid}
+                 <GatsbyImage image={item.node.img}
+                 alt={item.node.name} 
+                //  fluid={item.node.children.fluid}
                  /> 
              </div>
          )
