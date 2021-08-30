@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby';
 // import Img from "gatsby-image"
-import { GatsbyImage , getImage } from "gatsby-plugin-image"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 
 
 const Projects = () => {
@@ -13,10 +13,14 @@ const Projects = () => {
         edges {
           node {
             img
+            alt
+            button
+            name
           }
         }
       }
     }
+
  `)
 
 // const ComponentName = ({ data }) => <pre>{JSON.stringify(data, null, 4)}</pre>
@@ -37,15 +41,14 @@ const Projects = () => {
 
 // export default ComponentName
 
-// function BlogPost({ data }) {
-//   const image = getImage(data.blogPost.avatar)
+// function getProjects({ data }) {
+//   const image = getImage(data.edges.node.Img)
 //   return (
 //     <section>
-//       <h2>{data.blogPost.title}</h2>
-//       <GatsbyImage image={image} alt={data.blogPost.author} />
-//       <p>{data.blogPost.body}</p>
+//       <GatsbyImage image={image} alt={data.edges.node.name} />
 //     </section>
 //   )
+  
 //  }
     
  function getProjects(data) {
@@ -56,12 +59,13 @@ const Projects = () => {
           // const image = getImage(item.node.img)
          ProjectsArray.push(
              <div key={index}>
-                 <GatsbyImage image={item.node.img}
+                 <img src={item.node.img}
                  alt={item.node.name} 
                 //  fluid={item.node.children.fluid}
                  /> 
              </div>
          )
+        //  console.log(GatsbyImage)
      })
      return ProjectsArray
  }
