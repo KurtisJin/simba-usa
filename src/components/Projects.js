@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby';
 // import Img from "gatsby-image"
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+// import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 
 
 const Projects = () => {
@@ -59,7 +60,7 @@ const Projects = () => {
           // const image = getImage(item.node.img)
          ProjectsArray.push(
              <div key={index}>
-                 <img src={item.node.img}
+                 <Img fixed={item.node.img}
                  alt={item.node.name} 
                 //  fluid={item.node.children.fluid}
                  /> 
